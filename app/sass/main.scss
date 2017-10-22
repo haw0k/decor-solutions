@@ -1,0 +1,38 @@
+@import "fonts";
+@import "libs";
+@import "base";
+@import "vars";
+
+// Пользовательские стили
+.top-line {
+  .logo {
+    display: block;
+    font-size: 26px;
+    .logo__img {
+      width: 112px;
+      height: 109px;
+    }
+    .logo__txt {
+      display: inline-block;
+    }
+    span {
+      display: block;
+    }
+    .logo__name {
+      font-family: OpenSans-Semibold, sans-serif;
+      text-transform: uppercase;
+    }
+    .logo__subname {
+      font-family: HoneyScript, sans-serif;
+      text-transform: lowercase;
+    }
+  }
+  a {
+    // font-family: Open-Sans, sans-serif;
+    text-transform: uppercase;
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+@import "media"; // Всегда в конце

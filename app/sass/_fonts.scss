@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url('../fonts/OpenSans-Light-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url('../fonts/OpenSans-Regular-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'OpenSans-Semibold';
+	src: url('../fonts/OpenSans-Semibold-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'OpenSans-Bold';
+	src: url('../fonts/OpenSans-Bold-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'HoneyScript';
+	src: url('../fonts/HoneyScript-Semibold-webfont.woff') format('woff');
+}
+
+@import "../libs/font-awesome/scss/font-awesome.scss";
