@@ -4,28 +4,146 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-
+ .what-doing {
+   h2 {
+     margin: 60px 0 60px-$gutter;
+   }
+   .tiles-item h3 {
+     font-size: 30px;
+   }
+ }
+ .who {
+   h2 {
+     padding: 60px 0;
+   }
+ }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
+  .top-line {
+    .main-menu {
+      display: none;
+    }
+    .menu-toggle {
+      display: flex;
+    }
+  }
+  .top {
+    background-position: 80% center;
+  }
+  h1, h2 {
+    font-size: 40px;
+    line-height: 52px
+  }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+  .top-line {
+    height: 45px;
+    .logo {
+      margin-left: $big-gutter/2;
+      .logo__img {
+        width: 30px;
+      }
+      .logo__name, .logo__subname {
+        font-size: 11px;
+        line-height: 12px;
+      }
+    }
+    .menu-toggle {
+      margin-right: $big-gutter/2;
+    }
+  }
+  h1, h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .top {
+    background-position: 70% center;
+  }
+  .what-doing {
+    h2 {
+      margin: 50px 0 50px-$gutter;
+    }
+    .tiles-item h3 {
+      font-size: 22px;
+    }
+  }
+  .who {
+    h2 {
+      padding: 50px 0;
+    }
+  }
+}
 
+@media only screen and (max-width : 560px) {
+  h1,h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .what-doing {
+    .tiles {
+      grid-template-columns: 100% 1fr;
+      grid-template-rows: repeat(4, 1fr);
+    }
+    .tiles-item h3 {
+      font-size: 24px;
+    }
+    .tiles-item--stinopis {
+      grid-row: 1/2;
+    }
+    .tiles-item--soft {
+      grid-row: 2/3;
+    }
+    .tiles-item--textile {
+      grid-row: 3/4;
+    }
+    .tiles-item--wallpaper {
+      grid-row: 4/5;
+    }
+  }
 }
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+  .top {
+    background-position: 70% center;
+  }
+  .what-doing {
+    h2 {
+      margin: 30px 0 30px-$gutter;
+    }
+    .tiles-item h3 {
+      font-size: 20px;
+    }
+  }
+  .who {
+    h2 {
+      padding: 30px 0;
+    }
+    .who-story__wrapper {
+      flex-direction: column;
+      .who-story__img, .who-story__text {
+        width: 100%;
+        height: 100%;
+      }
+      .who-story__img {
+        margin: 0;
+      }
+      .who-story__text {
+        // margin: $gutter $gutter $gutter $gutter;
+        margin: 0;
+        padding: $gutter;
+      }
+    }
+  }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-
 }
 
 /*==========  Mobile First  ==========*/

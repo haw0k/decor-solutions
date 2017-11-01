@@ -26,6 +26,7 @@ gulp.task('browser-sync', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/owl.carousel/dist/owl.carousel.min.js',
 		'app/js/common.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
@@ -39,7 +40,7 @@ gulp.task('sass', function() {
 	.pipe(sourcemaps.init())
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
 	.pipe(rename({suffix: '.min', prefix : ''}))
-	.pipe(autoprefixer(['last 15 versions']))
+	.pipe(autoprefixer({ browsers:['last 2 versions'], grid: true}))
 	.pipe(cleanCSS()) // Опционально, закомментировать при отладке
 	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest('app/css'))
