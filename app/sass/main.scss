@@ -2,8 +2,10 @@
 @import "libs";
 @import "base";
 @import "vars";
+@import "slick-theme-fa";
 
 // Пользовательские стили
+
 .top-line {
   z-index: 2;
   position: fixed;
@@ -109,12 +111,17 @@ h1, h2 {
   text-transform: uppercase;
   text-align: center;
   font-size: 50px;
-  line-height: 82px;
+  line-height: 50px;
+  margin: 0;
+}
+h2 {
+  padding: $big-gutter*2 $gutter;
 }
 
 .what-doing {
   h2 {
-    margin: 100px 0 100px-$gutter 0;
+    // margin: 100px 0 100px-$gutter 0;
+    padding: $big-gutter*2 $gutter $big-gutter*2-$gutter $gutter;
   }
   margin-bottom: $gutter/2;
   .tiles {
@@ -179,10 +186,10 @@ h1, h2 {
 }
 .who {
   background-color: #E9ECF3;
-  h2 {
-    padding: 100px 0;
-    margin: 0;
-  }
+  // h2 {
+  //   padding: 100px 0;
+  //   margin: 0;
+  // }
   .who-story__wrapper {
     display: flex;
     flex-direction: row;
@@ -206,15 +213,18 @@ h1, h2 {
   }
 }
 .partners {
-  h2 {
-    padding: 100px 0;
-    margin: 0;
-  }
+  // h2 {
+  //   padding: 100px 0;
+  //   margin: 0;
+  // }
   .partner_link {
-    width: 569px;
-    height: 100px;
-    display: inline-block;
-    background-color: #eee;
+    width: 220px;
+    height: 75px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $white;
+    margin: 0 5px;
     &--1 {
       background-image: url("../img/logos/dd.png");
     }
@@ -246,35 +256,18 @@ h1, h2 {
       background-image: url("../img/logos/studio-mebel.png");
     }
   }
-  .owl-carousel {
-    position: relative;
-    padding: 0 50px;
-		.owl-nav {
-			position: absolute;
-			width: 100%;
-      left: 0;
-			top: 0;
-			> div {
-				position: absolute;
-				left: 10px;
-				font-size: 34px;
-				line-height: 100px;
-				color: #9c9c9c;
-				transition: color .25s ease;
-				&:hover,&:active {
-          color: $accent;
-        }
-				&.owl-next {
-					right: 10px;
-					left: auto;
-        }
-      }
-    }
-  }
 }
-.owl-stage {
-    margin: 0 auto;
+.carousel {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 91px;
 }
+.slick-slider .slick-track {
+  background-color: $white;
+
+}
+// .owl-stage {
+// }
 /* MENU FOR MOBILES AND TABLETS start */
 .overlay {
   position: absolute;
@@ -367,7 +360,9 @@ h1, h2 {
       color: $white;
       transition: font, color .25s ease;
       &:hover, &:active {
-        font-family: OpenSans-Semibold, sans-serif;
+        // font-family: OpenSans-Bold, sans-serif;
+        // font-size: 20px;
+        font-weight: 800;
         color: $accent;
       }
     }
@@ -378,6 +373,113 @@ h1, h2 {
   }
   .socials-menu__instagram {
     font-size: 25px;
+  }
+}
+.contacts {
+  background-color: $black;
+  color: $gray;
+  align-content: center;
+  // h2 {
+  //   // padding: 100px $gutter;
+  //   line-height: 50px;
+  //   margin: 0;
+  // }
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    justify-content: space-around;
+    h3 {
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0 0 $gutter*3 0;
+      i {
+        margin-right: 5px;
+      }
+    }
+    .contact__item {
+      font-size: 20px;
+      line-height: 40px;
+      // border: 1px solid $gray;
+      padding: 0;
+    }
+    .contact__item--phones {
+      h3 i { margin-right: 12px}
+      // text-align: center;
+    }
+    address {
+      font-style: normal;
+    }
+  }
+  .contacts__wrapper .contact__item, .contacts__footer a.button,
+  .contacts__footer nav {
+    width: 295px;
+  }
+
+  .contacts__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    nav, .socials-menu__fb, .socials-menu__instagram {
+      color: $gray;
+    }
+    a.button {
+      margin: $big-gutter 0 $big-gutter 0;
+      background-color: $gray;
+      height: 85px;
+      line-height:85px;
+      border-radius: 10px;
+      text-align: center;
+      font-family: OpenSans-Ligh, sans-serif;
+      font-size: 25px;
+      transition: background-color .25s ease;
+      &:hover, &:active {
+        background-color: $accent;
+        // lighten($gray, 15%);
+      }
+    }
+    nav {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        li {
+          line-height: 50px;
+          i {
+            transition: color .25s ease;
+            &:hover, &:active {
+              color: $accent;
+              // lighten($gray, 15%);
+            }
+          }
+          .socials-menu__fb {
+            font-size: 45px;
+          }
+          .socials-menu__instagram {
+            font-size: 50px;
+          }
+        }
+      }
+    }
+    .socials-menu__fb , .socials-menu__instagram {
+      margin: 0;
+      padding: 0;
+    }
+    .socials-menu__fb {
+      font-size: 22px;
+    }
+    .socials-menu__instagram {
+      font-size: 25px;
+    }
+    .copyright {
+      margin-top: $big-gutter/2;
+      font-size: 11px;
+      line-height: 11px;
+      color: darken($gray, 20%);
+      text-transform: none;
+    }
   }
 }
 
