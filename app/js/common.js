@@ -35,7 +35,7 @@ $(function() {
         slidesToShow: 6,
         pauseOnFocus: true,
         pauseOnHover: true,
-        // cssEase: 'linear',
+        cssEase: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
         responsive: [
           {
             breakpoint: 1921,
