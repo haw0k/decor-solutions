@@ -1,9 +1,17 @@
 @import "vars";
 
 /*==========  Desktop First  ==========*/
+@media only screen and (max-width : 1920px) {
+  .top {
+    background-image: url(../img/KUBA2800-hd.jpg);
+  }
+}
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+  .top {
+    background-image: url(../img/KUBA2800-lg.jpg);
+  }
   h2 {
     padding: 60px $gutter;
   }
@@ -24,6 +32,9 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+  .top {
+    background-image: url(../img/KUBA2800-md.jpg);
+  }
   .top-line {
     .main-menu {
       display: none;
@@ -69,6 +80,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+  .top {
+    background-image: url(../img/KUBA2800-sm.jpg);
+  }
   .top-line {
     height: 45px;
     .logo {
@@ -161,6 +175,9 @@
 }
 
 @media only screen and (max-width : 560px) {
+  .top {
+    background-image: url(../img/KUBA2800-560.jpg);
+  }
   h1,h2 {
     font-size: 24px;
     line-height: 28px;
@@ -193,6 +210,7 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
   .top {
+    background-image: url(../img/KUBA2800-480.jpg);
     background-position: 70% center;
   }
   .what-doing {
@@ -227,6 +245,9 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
+  .top {
+    background-image: url(../img/KUBA2800-320.jpg);
+  }
 }
 
 /*==========  Mobile First  ==========*/
@@ -255,4 +276,10 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
+}
+
+@media only screen and (min-width : 1921px) {
+  .top {
+    background-image: url(../img/KUBA2800.jpg);
+  }
 }

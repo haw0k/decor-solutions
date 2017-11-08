@@ -8,7 +8,8 @@ var gulp           = require('gulp'),
 		cleanCSS       = require('gulp-clean-css'),
 		rename         = require('gulp-rename'),
 		autoprefixer   = require('gulp-autoprefixer'),
-		notify         = require("gulp-notify");
+		notify         = require("gulp-notify"),
+		imagemin       = require('gulp-imagemin');
 
 // Сервер и автообновление страницы Browsersync
 gulp.task('browser-sync', function() {
@@ -46,6 +47,18 @@ gulp.task('sass', function() {
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
+
+// gulp.task('imagemin', function() {
+// 	return gulp.src('app/img/**/*')
+// 	.pipe(cache(imagemin()))
+// 	.pipe(gulp.dest('dist/img'));
+// });
+
+gulp.task('imagemin', () =>
+    gulp.src('app/img/**/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
+);
 
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.scss', ['sass']);
