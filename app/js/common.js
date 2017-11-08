@@ -9,6 +9,8 @@ $(function() {
   		$('.overlay').toggle(function(){
         $(this).css('display', 'none');
       });
+
+      $('.overlay ~ *').css('filter','none'); // убираем размытие фона
       // $('.menu-toggle').toggle();
   	});
 
@@ -18,6 +20,7 @@ $(function() {
       // $('.overlay').slideToggle(function(){
         $(this).css('display', 'flex');
       });
+      $('.overlay ~ *').css('filter','blur(5px)'); // добавляем размытие фона
       // $('.main-menu--hidden').toggle(function(){
       //   $(this).css('display', 'flex');
       // });
@@ -25,6 +28,16 @@ $(function() {
       // $('.menu-toggle').toggle();
     });
     // menu end
+
+    // при клике по ссылке мобильного меню закрываем его
+    $(document).on('click', '.main-menu--hidden li a', function (e) {
+      // e.preventDefault();
+      $('.menu-close').toggle();
+  		$('.overlay').toggle(function(){
+        $(this).css('display', 'none');
+      });
+      $('.overlay ~ *').css('filter','none'); // убираем размытие фона
+    });
 
     // carousel for partners logos start
       $('.carousel').slick({

@@ -271,7 +271,8 @@ h2 {
 /* MENU FOR MOBILES AND TABLETS start */
 .overlay {
   position: absolute;
-  display: flex;
+  // position: fixed;
+  // display: flex;
   display: none;
   top: 0;
   left: 0;
@@ -283,10 +284,11 @@ h2 {
   position: fixed;
   background: $dark;
   opacity: $dark-opacity--hover;
+  overflow-x: hidden;
 }
-.overlay ~ * {
-	filter: blur(5px);
-}
+// .overlay ~ * {
+// 	filter: blur(5px);
+// }
 .menu-close {
   overflow: visible;
   cursor: pointer;
