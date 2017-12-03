@@ -40,55 +40,72 @@ $(function() {
     });
 
     // carousel for partners logos start
-      $('.carousel').slick({
-        variableWidth: false,
-        autoplay: true,
-        arrows: true,
-        dots: false,
-        slidesToShow: 6,
-        pauseOnFocus: true,
-        pauseOnHover: true,
-        cssEase: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-        responsive: [
-          {
-            breakpoint: 1921,
-            settings: {
-              slidesToShow: 5,
-              slidesToScroll: 1,
-            }
-          },
-          {
-            breakpoint: 1281,
-            settings: {
-              slidesToShow: 4,
-            }
-          },
-          {
-            breakpoint: 980,
-            settings: {
-              slidesToShow: 2
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 300,
-            settings: {
-              slidesToShow: 1
-            }
+    $('.carousel').slick({
+      variableWidth: false,
+      autoplay: true,
+      arrows: true,
+      dots: false,
+      slidesToShow: 6,
+      pauseOnFocus: true,
+      pauseOnHover: true,
+      cssEase: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+      responsive: [
+        {
+          breakpoint: 1921,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
           }
-        ]
-      });
-      // carousel for partners logos end
+        },
+        {
+          breakpoint: 1281,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 980,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 300,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+    // carousel for partners logos end
+
+    // anchor link animation start
+    $(".menu__item").on("click","a", function (event) {
+     //отменяем стандартную обработку нажатия по ссылке
+     event.preventDefault();
+     console.log('bbbbb');
+
+     //забираем идентификатор бока с атрибута href
+     var id  = $(this).attr('href'),
+
+     //узнаем высоту от начала страницы до блока на который ссылается якорь
+       top = $(id).offset().top;
+
+     //анимируем переход на расстояние - top за 1500 мс
+     $('body,html').animate({scrollTop: top}, "slow");
+    });
+    // anchor link animation end
 
 });

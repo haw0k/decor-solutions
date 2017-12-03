@@ -210,6 +210,7 @@
 
 		<div class="contacts__footer">
 			<a href="#" class="button">Зробити заявку</a>
+
 			<nav>
 				<ul>
 					<li>
@@ -225,12 +226,51 @@
 				</ul>
 			</nav>
 
-			<a href="http://ua-ip.com" class="copyright" target="_blank">© 2017 Кирило Злачевський</p>
+			<a href="http://ua-ip.com" class="copyright" target="_blank">© 2017 Кирило Злачевський</a>
 
 		</div>
 
 	</section>
 
+	<section class="feedback hidden">
+		<form class="contact-form">
+
+			<div class="contact-form__head">
+				<h3>Зробити заявку</h3>
+				<p>Залиште заявку і ми зв'яжемось з вами найближчим часом.</p>
+			</div>
+
+			<label>
+				<span>Ваше ім'я:</span>
+				<input type="text" name="Имя" placeholder="ім'я..." maxlength="50">
+			</label>
+
+			<label>
+				<span>Ваш телефон:</span>
+				<input type="tel" name="Телефон" placeholder="телефон..." maxlength="25" required>
+			</label>
+
+			<label>
+				<span>Адреса Вашої електронної пошти:</span>
+				<input type="tel" name="email" placeholder="електронна пошта..." maxlength="50">
+			</label>
+
+			<label>
+				<span>Послуга:</span>
+				<select name="Послуга">
+					<option value="стінопис">стінопис</option>
+					<option value="м'які стінові панелі">м'які стінові панелі</option>
+					<option value="інтер'єрний текстиль">інтер'єрний текстиль</option>
+					<option value="дизайнерські шпалери">дизайнерські шпалери</option>
+				</select>
+			</label>
+
+			<div class="text-center">
+				<button class="button">Надіслати</button>
+			</div>
+
+		</form>
+	</section>
 
 
 	<link rel="stylesheet" href="css/main.min.css">
