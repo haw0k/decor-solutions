@@ -27,6 +27,7 @@ gulp.task('browser-sync', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/magnific-popup/dist/jquery.magnific-popup.js',
 		'app/libs/slick-carousel/slick/slick.min.js',
 		'app/js/common.js', // Всегда в конце
 		])
@@ -41,7 +42,7 @@ gulp.task('sass', function() {
 	.pipe(sourcemaps.init())
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
 	.pipe(rename({suffix: '.min', prefix : ''}))
-	.pipe(autoprefixer({ browsers:['last 2 versions'], grid: true}))
+	// .pipe(autoprefixer({ browsers:['last 2 versions'], grid: true}))
 	.pipe(cleanCSS()) // Опционально, закомментировать при отладке
 	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest('app/css'))

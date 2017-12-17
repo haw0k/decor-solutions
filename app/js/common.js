@@ -1,4 +1,26 @@
 $(function() {
+  //E-mail Ajax Send begin
+	$("#feedback-form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			// alert("Thank you!");
+			console.log("Thank you!");
+			$(".success").addClass("active");
+			setTimeout(function() {
+				// Done Functions
+				$(".success").removeClass("active");
+				th.trigger("reset");
+				$.magnificPopup.close();
+			}, 3000);
+		});
+  	return false;
+  });
+  //E-mail Ajax Send end
+
   $(document).on('click', '.menu-close', function (e) {
   		e.preventDefault();
       // $('.main-menu--hidden').toggle(function(){
@@ -93,19 +115,17 @@ $(function() {
 
     // anchor link animation start
     $(".menu__item").on("click","a", function (event) {
-     //отменяем стандартную обработку нажатия по ссылке
-     event.preventDefault();
-     console.log('bbbbb');
+      event.preventDefault();
 
-     //забираем идентификатор бока с атрибута href
-     var id  = $(this).attr('href'),
-
-     //узнаем высоту от начала страницы до блока на который ссылается якорь
-       top = $(id).offset().top;
-
-     //анимируем переход на расстояние - top за 1500 мс
-     $('body,html').animate({scrollTop: top}, "slow");
+      var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 900);
     });
     // anchor link animation end
 
+  $('.show-form').magnificPopup({
+  	type: 'inline',
+  	preloader: false,
+  	focus: '#your-name',
+	});
 });

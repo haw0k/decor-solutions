@@ -80,26 +80,26 @@
 	</section>
 
 	<section class="what-doing">
-		<a name="what-doing"></a>
+		<a id="what-doing" name="what-doing"></a>
 		<h2>Що робимо</h2>
 		<div class="tiles grid">
 			<div class="tiles-item tiles-item--stinopis grid" style="background-image: url(img/stinopis-fhd.jpg);">
 				<a href="#" class="tiles-item__link"><h3>стінопис</h3></a>
 			</div>
 			<div class="tiles-item tiles-item--soft grid" style="background-image: url(img/soft_interior.jpg);">
-				<a href="#" class="tiles-item__link"><h3>м'які стінові панелі</h3></a>
+				<a href="http://softinterior.it/" class="tiles-item__link" target="_blank"><h3>м'які стінові панелі</h3></a>
 			</div>
 			<div class="tiles-item tiles-item--textile grid" style="background-image: url(img/textile-fhd.jpg);">
-				<a href="#" class="tiles-item__link"><h3>інтер'єрний текстиль</h3></a>
+				<a href="http://dicentra.com.ua/" class="tiles-item__link" target="_blank"><h3>інтер'єрний текстиль</h3></a>
 			</div>
 			<div class="tiles-item tiles-item--wallpaper grid" style="background-image: url(img/texturae-fhd.jpg);">
-				<a href="#" class="tiles-item__link"><h3>дизайнерські шпалери</h3></a>
+				<a href="http://www.texturae.it/" class="tiles-item__link" target="_blank"><h3>дизайнерські шпалери</h3></a>
 			</div>
 		</div>
 	</section>
 
 	<section class="who">
-		<a name="who"></a>
+		<a id="who" name="who"></a>
 		<h2>Хто ми</h2>
 		<div class="who-story__wrapper">
 			<img class="who-story__img" src="img/KUBA3131-2.png" alt="Who we are">
@@ -139,7 +139,7 @@
 		</div>
 	</section>
 	<section class="partners">
-		<a name="partners"></a>
+		<a id="partners" name="partners"></a>
 		<h2>Партнери</h2>
 		<div class="carousel">
 			<a href="https://www.burda.ua/Magazines/Details?name=DomusDesign"
@@ -166,7 +166,7 @@
 	</section>
 
 	<section class="contacts">
-		<a name="contacts"></a>
+		<a id="contacts" name="contacts"></a>
 		<h2>Контакти</h2>
 		<div class="contacts__wrapper">
 
@@ -209,7 +209,7 @@
 		</div>
 
 		<div class="contacts__footer">
-			<a href="#" class="button">Зробити заявку</a>
+			<a href="#feedback-form" class="button show-form">Зробити заявку</a>
 
 			<nav>
 				<ul>
@@ -232,8 +232,17 @@
 
 	</section>
 
-	<section class="feedback hidden">
-		<form class="contact-form">
+	<section class="feedback">
+		<form id="feedback-form" class="contact-form mfp-hide" method="POST">
+
+			<div class="success">
+				<p>Дякуємо за заявку!</p>
+			</div>
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="Decor Solutions website">
+			<input type="hidden" name="admin_email" value="root@decor-solutions.com.ua">
+			<input type="hidden" name="form_subject" value="Заявка з сайту">
+			<!-- END Hidden Required Fields -->
 
 			<div class="contact-form__head">
 				<h3>Зробити заявку</h3>
@@ -242,7 +251,7 @@
 
 			<label>
 				<span>Ваше ім'я:</span>
-				<input type="text" name="Имя" placeholder="ім'я..." maxlength="50">
+				<input id="your-name" type="text" name="Имя" placeholder="ім'я..." maxlength="50">
 			</label>
 
 			<label>
@@ -252,7 +261,7 @@
 
 			<label>
 				<span>Адреса Вашої електронної пошти:</span>
-				<input type="tel" name="email" placeholder="електронна пошта..." maxlength="50">
+				<input type="email" name="email" placeholder="електронна пошта..." maxlength="50">
 			</label>
 
 			<label>
