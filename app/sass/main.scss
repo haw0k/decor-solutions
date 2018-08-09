@@ -123,6 +123,7 @@ h2 {
   h2 {
     // margin: 100px 0 100px-$gutter 0;
     padding: $big-gutter*2 $gutter $big-gutter*2-$gutter $gutter;
+
   }
   margin-bottom: $gutter/2;
   .tiles {
@@ -145,6 +146,11 @@ h2 {
       text-align: center;
       text-transform: none;
       font-weight: 100;
+      span {
+        font-size: 20px;
+        line-height: 55px;
+        vertical-align: top;
+      }
     }
     a {
       color: $white;
