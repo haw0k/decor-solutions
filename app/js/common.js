@@ -23,31 +23,23 @@ $(function() {
 
   $(document).on('click', '.menu-close', function (e) {
 		e.preventDefault();
-    // $('.main-menu--hidden').toggle(function(){
-    //   $(this).css('display', 'none');
-    // });
     $('.menu-close').toggle();
-		// $('.overlay').slideToggle(function(){
 		$('.overlay').toggle(function(){
       $(this).css('display', 'none');
+			$('body').removeClass('hidden-y');
     });
 
     $('.overlay ~ *').css('filter','none'); // убираем размытие фона
-    // $('.menu-toggle').toggle();
 	});
 
   $(document).on('click', '.menu-toggle', function (e) {
     e.preventDefault();
     $('.overlay').toggle(function(){
-    // $('.overlay').slideToggle(function(){
       $(this).css('display', 'flex');
+			$('body').toggleClass('hidden-y');
     });
     $('.overlay ~ *').css('filter','blur(5px)'); // добавляем размытие фона
-    // $('.main-menu--hidden').toggle(function(){
-    //   $(this).css('display', 'flex');
-    // });
     $('.menu-close').toggle();
-    // $('.menu-toggle').toggle();
   });
   // menu end
 
