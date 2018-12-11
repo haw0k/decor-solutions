@@ -5,7 +5,23 @@
 @import "slick-theme-fa";
 
 // Пользовательские стили
-
+@keyframes turning {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(5deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(-0deg);
+	}
+}
 .top-line {
   z-index: 2;
   position: fixed;
@@ -30,6 +46,14 @@
     .logo__img {
       width: 70px;
       height: 70px;
+      &:hover {
+        animation-name: turning;
+        animation-duration: 0.6s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
     }
     .logo__txt {
       margin-left: $gutter/2;
@@ -88,6 +112,14 @@
     display: none;
     i {
       font-size: 20px;
+      &:hover {
+        animation-name: turning;
+        animation-duration: 0.6s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
     }
   }
 }
@@ -404,6 +436,12 @@ h2 {
     color: $accent;
     text-transform: uppercase;
     opacity: 1;
+    animation-name: turning;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 }
 .main-menu {
@@ -444,10 +482,9 @@ h2 {
       color: $white;
       transition: font, color .25s ease;
       &:hover, &:active {
-        // font-family: OpenSans-Bold, sans-serif;
-        // font-size: 20px;
         font-weight: 800;
         color: $accent;
+
       }
     }
   }
@@ -457,6 +494,14 @@ h2 {
   }
   .socials-menu__instagram {
     font-size: 25px;
+  }
+  .socials-menu__instagram i:hover, .socials-menu__fb i:hover {
+    animation-name: turning;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 }
 .contacts {
@@ -537,6 +582,12 @@ h2 {
             &:hover, &:active {
               color: $accent;
               // lighten($gray, 15%);
+                animation-name: turning;
+                animation-duration: 0.6s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
             }
           }
           .socials-menu__fb {
