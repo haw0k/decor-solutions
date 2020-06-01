@@ -152,18 +152,19 @@ h2 {
 }
 
 .what-doing {
+  margin-bottom: $gutter/2;
   h2 {
     // margin: 100px 0 100px-$gutter 0;
     padding: $big-gutter*2 $gutter $big-gutter*2-$gutter $gutter;
-
   }
-  margin-bottom: $gutter/2;
+
   .tiles {
     padding: $gutter;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: $gutter;
   }
+
   .tiles-item {
     min-height: 35vh;
     background-size: cover;
@@ -171,6 +172,11 @@ h2 {
     position: relative;
     z-index: 0;
     align-content: center;
+
+    &__link {
+      color: white;
+    }
+
     h3 {
       padding-left: $gutter;
       padding-right: $gutter;
